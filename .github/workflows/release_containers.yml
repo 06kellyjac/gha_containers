@@ -35,9 +35,9 @@ jobs:
         with:
           # images: kubesec/kubesec,ghcr.io/controlplaneio/kubesec
           images: 06kellyjac/kubesec
-          tag-latest: ${{ matrix.containers.suffix == '' }}
-          tag-semver: |
-            {{version}}${{ matrix.containers.suffix }}
+          flavor: |
+            latest=${{ matrix.containers.suffix == '' }}
+            suffix=${{ matrix.containers.suffix }}
           label-custom: |
             org.opencontainers.image.vendor=controlplane
             org.opencontainers.image.url=https://kubesec.io/
