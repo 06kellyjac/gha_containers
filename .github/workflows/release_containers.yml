@@ -38,7 +38,7 @@ jobs:
           flavor: |
             latest=${{ matrix.containers.suffix == '' }}
             suffix=${{ matrix.containers.suffix }}
-          label-custom: |
+          labels: |
             org.opencontainers.image.vendor=controlplane
             org.opencontainers.image.url=https://kubesec.io/
 
