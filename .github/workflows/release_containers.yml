@@ -1,8 +1,7 @@
 name: Release Containers
 on:
-  create:
-    branches:
-      - "!*"
+  # https://github.com/actions/runner/issues/1007
+  push:
     tags:
       - ^v*.*.*
 
