@@ -17,10 +17,9 @@ jobs:
 
       - name: Check out code
         uses: actions/checkout@v2.3.4
-
-      - name: Launch goreleaser
-        uses: goreleaser/goreleaser-action@v2.7.0
-        with:
-          args: release
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      # - name: Launch goreleaser
+      #   uses: goreleaser/goreleaser-action@v2.7.0
+      #   with:
+      #     args: release
+      #   env:
+      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
