@@ -1,4 +1,4 @@
-name: Release
+name: Release Containers
 on:
   create:
     branches:
@@ -35,6 +35,9 @@ jobs:
         with:
           # images: kubesec/kubesec,ghcr.io/controlplaneio/kubesec
           images: 06kellyjac/kubesec
+          tags: |
+            type=semver,pattern=v{{version}}
+            type=semver,pattern=v{{major}}
           flavor: |
             latest=${{ matrix.containers.suffix == '' }}
             suffix=${{ matrix.containers.suffix }}
